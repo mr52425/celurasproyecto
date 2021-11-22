@@ -1,0 +1,17 @@
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\celularespro.exe.config
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\celularespro.exe
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\celularespro.pdb
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\celularespro.xml
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\obj\Debug\celularespro.vbproj.AssemblyReference.cache
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\obj\Debug\celularespro.Form1.resources
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\obj\Debug\celularespro.Resources.resources
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\obj\Debug\celularespro.vbproj.GenerateResource.cache
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\obj\Debug\celularespro.vbproj.CoreCompileInputs.cache
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\obj\Debug\celularespro.exe
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\obj\Debug\celularespro.xml
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\obj\Debug\celularespro.pdb
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\EntityFramework.dll
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\EntityFramework.xml
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\obj\Debug\celularespro.vbproj.CopyComplete

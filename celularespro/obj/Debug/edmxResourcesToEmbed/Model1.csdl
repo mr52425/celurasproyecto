@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="celularesproModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="celular">
+    <Key>
+      <PropertyRef Name="id_celular" />
+    </Key>
+    <Property Name="id_celular" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="caracteristicas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="precio" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="stock" Type="Int32" />
+    <NavigationProperty Name="detallepedido" Relationship="Self.FK__detallepe__id_ce__60A75C0F" FromRole="celular" ToRole="detallepedido" />
+  </EntityType>
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="edad" Type="Int32" />
+    <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="detallepedido" Relationship="Self.FK__detallepe__id_cl__619B8048" FromRole="cliente" ToRole="detallepedido" />
+    <NavigationProperty Name="pago" Relationship="Self.FK__pago__id_cliente__68487DD7" FromRole="cliente" ToRole="pago" />
+  </EntityType>
+  <EntityType Name="detallepedido">
+    <Key>
+      <PropertyRef Name="id_detallepedido" />
+    </Key>
+    <Property Name="id_detallepedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_celular" Type="Int32" Nullable="false" />
+    <Property Name="id_cliente" Type="Int32" Nullable="false" />
+    <Property Name="precio" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cantidad" Type="Int32" />
+    <NavigationProperty Name="celular" Relationship="Self.FK__detallepe__id_ce__60A75C0F" FromRole="detallepedido" ToRole="celular" />
+    <NavigationProperty Name="cliente" Relationship="Self.FK__detallepe__id_cl__619B8048" FromRole="detallepedido" ToRole="cliente" />
+    <NavigationProperty Name="pedido" Relationship="Self.FK__pedido__id_detal__6477ECF3" FromRole="detallepedido" ToRole="pedido" />
+  </EntityType>
+  <EntityType Name="pago">
+    <Key>
+      <PropertyRef Name="id_pago" />
+    </Key>
+    <Property Name="id_pago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="confirmacionpago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechapago" Type="DateTime" Precision="0" />
+    <Property Name="id_pedido" Type="Int32" />
+    <Property Name="id_cliente" Type="Int32" />
+    <NavigationProperty Name="cliente" Relationship="Self.FK__pago__id_cliente__68487DD7" FromRole="pago" ToRole="cliente" />
+    <NavigationProperty Name="pedido" Relationship="Self.FK__pago__id_pedido__693CA210" FromRole="pago" ToRole="pedido" />
+  </EntityType>
+  <EntityType Name="pedido">
+    <Key>
+      <PropertyRef Name="id_pedido" />
+    </Key>
+    <Property Name="id_pedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fechapedido" Type="DateTime" Precision="0" />
+    <Property Name="id_detallepedido" Type="Int32" />
+    <Property Name="entregapedido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="detallepedido" Relationship="Self.FK__pedido__id_detal__6477ECF3" FromRole="pedido" ToRole="detallepedido" />
+    <NavigationProperty Name="pago" Relationship="Self.FK__pago__id_pedido__693CA210" FromRole="pedido" ToRole="pago" />
+  </EntityType>
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="start_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="end_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="ipv6_database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ipv6_address" />
+      <PropertyRef Name="end_ipv6_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="start_ipv6_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="end_ipv6_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <Association Name="FK__detallepe__id_ce__60A75C0F">
+    <End Role="celular" Type="Self.celular" Multiplicity="1" />
+    <End Role="detallepedido" Type="Self.detallepedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="celular">
+        <PropertyRef Name="id_celular" />
+      </Principal>
+      <Dependent Role="detallepedido">
+        <PropertyRef Name="id_celular" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detallepe__id_cl__619B8048">
+    <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+    <End Role="detallepedido" Type="Self.detallepedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="detallepedido">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pago__id_cliente__68487DD7">
+    <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+    <End Role="pago" Type="Self.pago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="pago">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pedido__id_detal__6477ECF3">
+    <End Role="detallepedido" Type="Self.detallepedido" Multiplicity="0..1" />
+    <End Role="pedido" Type="Self.pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="detallepedido">
+        <PropertyRef Name="id_detallepedido" />
+      </Principal>
+      <Dependent Role="pedido">
+        <PropertyRef Name="id_detallepedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pago__id_pedido__693CA210">
+    <End Role="pedido" Type="Self.pedido" Multiplicity="0..1" />
+    <End Role="pago" Type="Self.pago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pedido">
+        <PropertyRef Name="id_pedido" />
+      </Principal>
+      <Dependent Role="pago">
+        <PropertyRef Name="id_pedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="celularesproEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="celular" EntityType="Self.celular" />
+    <EntitySet Name="cliente" EntityType="Self.cliente" />
+    <EntitySet Name="detallepedido" EntityType="Self.detallepedido" />
+    <EntitySet Name="pago" EntityType="Self.pago" />
+    <EntitySet Name="pedido" EntityType="Self.pedido" />
+    <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
+    <EntitySet Name="ipv6_database_firewall_rules" EntityType="Self.ipv6_database_firewall_rules" />
+    <AssociationSet Name="FK__detallepe__id_ce__60A75C0F" Association="Self.FK__detallepe__id_ce__60A75C0F">
+      <End Role="celular" EntitySet="celular" />
+      <End Role="detallepedido" EntitySet="detallepedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detallepe__id_cl__619B8048" Association="Self.FK__detallepe__id_cl__619B8048">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="detallepedido" EntitySet="detallepedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pago__id_cliente__68487DD7" Association="Self.FK__pago__id_cliente__68487DD7">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="pago" EntitySet="pago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pedido__id_detal__6477ECF3" Association="Self.FK__pedido__id_detal__6477ECF3">
+      <End Role="detallepedido" EntitySet="detallepedido" />
+      <End Role="pedido" EntitySet="pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pago__id_pedido__693CA210" Association="Self.FK__pago__id_pedido__693CA210">
+      <End Role="pedido" EntitySet="pedido" />
+      <End Role="pago" EntitySet="pago" />
+    </AssociationSet>
+    <FunctionImport Name="cliepago" ReturnType="Collection(celularesproModel.cliepago_Result)" />
+    <FunctionImport Name="clieped" ReturnType="Collection(celularesproModel.clieped_Result)" />
+    <FunctionImport Name="deletecel">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="deletecliente">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="insertarcel">
+      <Parameter Name="nom" Mode="In" Type="String" />
+      <Parameter Name="caract" Mode="In" Type="String" />
+      <Parameter Name="model" Mode="In" Type="String" />
+      <Parameter Name="prec" Mode="In" Type="Decimal" />
+      <Parameter Name="cantidad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="insertarcliente">
+      <Parameter Name="nom" Mode="In" Type="String" />
+      <Parameter Name="edad" Mode="In" Type="Int32" />
+      <Parameter Name="dir" Mode="In" Type="String" />
+      <Parameter Name="tel" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pagoped" ReturnType="Collection(celularesproModel.pagoped_Result)" />
+    <FunctionImport Name="pedidodet" ReturnType="Collection(celularesproModel.pedidodet_Result)" />
+    <FunctionImport Name="upcel">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="nom" Mode="In" Type="String" />
+      <Parameter Name="caract" Mode="In" Type="String" />
+      <Parameter Name="model" Mode="In" Type="String" />
+      <Parameter Name="prec" Mode="In" Type="Decimal" />
+      <Parameter Name="cantidad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="upclie">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="nom" Mode="In" Type="String" />
+      <Parameter Name="edad" Mode="In" Type="Int32" />
+      <Parameter Name="dir" Mode="In" Type="String" />
+      <Parameter Name="tel" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="cliepago_Result">
+    <Property Type="Int32" Name="id_cliente" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="edad" Nullable="true" />
+    <Property Type="String" Name="direccion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="id_pago" Nullable="false" />
+    <Property Type="String" Name="confirmacionpago" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechapago" Nullable="true" />
+    <Property Type="Int32" Name="id_pedido" Nullable="true" />
+    <Property Type="Int32" Name="id_cliente1" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="clieped_Result">
+    <Property Type="Int32" Name="id_detallepedido" Nullable="false" />
+    <Property Type="Int32" Name="id_celular" Nullable="false" />
+    <Property Type="Int32" Name="id_cliente" Nullable="false" />
+    <Property Type="Decimal" Name="precio" Nullable="true" Precision="19" />
+    <Property Type="Int32" Name="cantidad" Nullable="true" />
+    <Property Type="Int32" Name="id_cliente1" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="edad" Nullable="true" />
+    <Property Type="String" Name="direccion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="pagoped_Result">
+    <Property Type="Int32" Name="id_pedido" Nullable="false" />
+    <Property Type="DateTime" Name="fechapedido" Nullable="true" />
+    <Property Type="Int32" Name="id_detallepedido" Nullable="true" />
+    <Property Type="String" Name="entregapedido" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="id_pago" Nullable="false" />
+    <Property Type="String" Name="confirmacionpago" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechapago" Nullable="true" />
+    <Property Type="Int32" Name="id_pedido1" Nullable="true" />
+    <Property Type="Int32" Name="id_cliente" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="pedidodet_Result">
+    <Property Type="Int32" Name="id_pedido" Nullable="false" />
+    <Property Type="DateTime" Name="fechapedido" Nullable="true" />
+    <Property Type="Int32" Name="id_detallepedido" Nullable="true" />
+    <Property Type="String" Name="entregapedido" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="id_detallepedido1" Nullable="false" />
+    <Property Type="Int32" Name="id_celular" Nullable="false" />
+    <Property Type="Int32" Name="id_cliente" Nullable="false" />
+    <Property Type="Decimal" Name="precio" Nullable="true" Precision="19" />
+    <Property Type="Int32" Name="cantidad" Nullable="true" />
+  </ComplexType>
+</Schema>

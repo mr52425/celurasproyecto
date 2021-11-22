@@ -1,0 +1,436 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+celularespro
+</name>
+</assembly>
+<members>
+<member name="T:celularespro.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:celularespro.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:celularespro.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.celularDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.clienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.detallepedidoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.pagoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.pedidoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.calcularpromedioventceluDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.celularespedidosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.celulresempresaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.celuralesserieDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.clientescelularesPDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.clientesnumeroDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.estatusPcantDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.pagoclienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.procesoclienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.ventasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.cliepagoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.cliepedDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.pedidodetDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.celularRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.clienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.detallepedidoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.pagoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.pedidoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.calcularpromedioventceluRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.celularespedidosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.celulresempresaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.celuralesserieRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.clientescelularesPRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.clientesnumeroRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.estatusPcantRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.pagoclienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.procesoclienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.ventasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.cliepagoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.cliepedRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.pedidodetRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.celularRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.clienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.detallepedidoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.pagoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.pedidoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.calcularpromedioventceluRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.celularespedidosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.celulresempresaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.celuralesserieRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.clientescelularesPRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.clientesnumeroRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.estatusPcantRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.pagoclienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.procesoclienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.ventasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.cliepagoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.cliepedRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSet.pedidodetRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.celularTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.clienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.detallepedidoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.pagoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.pedidoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.calcularpromedioventceluTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.celularespedidosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.celulresempresaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.celuralesserieTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.clientescelularesPTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.clientesnumeroTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.estatusPcantTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.pagoclienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.procesoclienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.ventasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.cliepagoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.cliepedTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.pedidodetTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.QueriesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:celularespro.celularesproDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(celularespro.celularesproDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:celularespro.celularesproDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(celularespro.celularesproDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:celularespro.celularesproDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(celularespro.celularesproDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:celularespro.celularesproDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:celularespro.celularesproDataSetTableAdapters.TableAdapterManager.UpdateAll(celularespro.celularesproDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:celularespro.celularesproDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="celularesproModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="celular">
+    <Key>
+      <PropertyRef Name="id_celular" />
+    </Key>
+    <Property Name="id_celular" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="caracteristicas" Type="varchar" MaxLength="50" />
+    <Property Name="modelo" Type="varchar" MaxLength="50" />
+    <Property Name="precio" Type="money" />
+    <Property Name="stock" Type="int" />
+  </EntityType>
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="edad" Type="int" />
+    <Property Name="direccion" Type="varchar" MaxLength="50" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="detallepedido">
+    <Key>
+      <PropertyRef Name="id_detallepedido" />
+    </Key>
+    <Property Name="id_detallepedido" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_celular" Type="int" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="precio" Type="money" />
+    <Property Name="cantidad" Type="int" />
+  </EntityType>
+  <EntityType Name="pago">
+    <Key>
+      <PropertyRef Name="id_pago" />
+    </Key>
+    <Property Name="id_pago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="confirmacionpago" Type="varchar" MaxLength="50" />
+    <Property Name="fechapago" Type="date" />
+    <Property Name="id_pedido" Type="int" />
+    <Property Name="id_cliente" Type="int" />
+  </EntityType>
+  <EntityType Name="pedido">
+    <Key>
+      <PropertyRef Name="id_pedido" />
+    </Key>
+    <Property Name="id_pedido" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fechapedido" Type="date" />
+    <Property Name="id_detallepedido" Type="int" />
+    <Property Name="entregapedido" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'celularespro.dbo.calcularpromedioventcelu' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="calcularpromedioventcelu">
+          <Property Name="nombre" Type="varchar" MaxLength="50" />
+          <Property Name="porcentaje_de_pedidos" Type="int" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'celularespro.dbo.celularespedidos' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="celularespedidos">
+          <Property Name="nombre" Type="varchar" MaxLength="50" />
+          <Property Name="cantidad_pedidos" Type="int" />
+          <Property Name="cantidad_fisica" Type="int" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'celularespro.dbo.celulresempresa' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="celulresempresa">
+          <Property Name="caracteristicas" Type="varchar" MaxLength="50" />
+          <Property Name="cantidad_modelos" Type="int" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'celularespro.dbo.celuralesserie' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="celuralesserie">
+          <Property Name="modelo" Type="varchar" MaxLength="50" />
+          <Property Name="cantidad_de_modelos" Type="int" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'celularespro.dbo.clientescelularesP' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="clientescelularesP">
+          <Property Name="nombre_del_cliente" Type="varchar" MaxLength="50" />
+          <Property Name="nombre_Del_celular" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'celularespro.dbo.clientesnumero' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="clientesnumero">
+          <Property Name="numero_de_clientes" Type="int" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'celularespro.dbo.estatusPcant' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="estatusPcant">
+          <Property Name="status_pedidos" Type="varchar" MaxLength="50" />
+          <Property Name="cantidad" Type="int" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'celularespro.dbo.pagocliente' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="pagocliente">
+          <Property Name="nombre_del_cliente" Type="varchar" MaxLength="50" />
+          <Property Name="status" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'celularespro.dbo.procesocliente' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="procesocliente">
+          <Property Name="nombre_del_cliente" Type="varchar" MaxLength="50" />
+          <Property Name="status" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'celularespro.dbo.ventas' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="ventas">
+          <Property Name="precio" Type="money" />
+          <Property Name="cantidad" Type="int" />
+          <Property Name="fechapago" Type="date" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'celularespro.sys.database_firewall_rules' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="start_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="end_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="create_date" Type="datetime" Nullable="false" />
+    <Property Name="modify_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'celularespro.sys.ipv6_database_firewall_rules' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="ipv6_database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ipv6_address" />
+      <PropertyRef Name="end_ipv6_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="start_ipv6_address" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="end_ipv6_address" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="create_date" Type="datetime" Nullable="false" />
+    <Property Name="modify_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__detallepe__id_ce__60A75C0F">
+    <End Role="celular" Type="Self.celular" Multiplicity="1" />
+    <End Role="detallepedido" Type="Self.detallepedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="celular">
+        <PropertyRef Name="id_celular" />
+      </Principal>
+      <Dependent Role="detallepedido">
+        <PropertyRef Name="id_celular" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detallepe__id_cl__619B8048">
+    <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+    <End Role="detallepedido" Type="Self.detallepedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="detallepedido">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pago__id_cliente__68487DD7">
+    <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+    <End Role="pago" Type="Self.pago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="pago">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pago__id_pedido__693CA210">
+    <End Role="pedido" Type="Self.pedido" Multiplicity="0..1" />
+    <End Role="pago" Type="Self.pago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pedido">
+        <PropertyRef Name="id_pedido" />
+      </Principal>
+      <Dependent Role="pago">
+        <PropertyRef Name="id_pedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pedido__id_detal__6477ECF3">
+    <End Role="detallepedido" Type="Self.detallepedido" Multiplicity="0..1" />
+    <End Role="pedido" Type="Self.pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="detallepedido">
+        <PropertyRef Name="id_detallepedido" />
+      </Principal>
+      <Dependent Role="pedido">
+        <PropertyRef Name="id_detallepedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="cliepago" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="clieped" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="deletecel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="deletecliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="insertarcel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nom" Type="varchar" Mode="In" />
+    <Parameter Name="caract" Type="varchar" Mode="In" />
+    <Parameter Name="model" Type="varchar" Mode="In" />
+    <Parameter Name="prec" Type="money" Mode="In" />
+    <Parameter Name="cantidad" Type="int" Mode="In" />
+  </Function>
+  <Function Name="insertarcliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nom" Type="varchar" Mode="In" />
+    <Parameter Name="edad" Type="int" Mode="In" />
+    <Parameter Name="dir" Type="varchar" Mode="In" />
+    <Parameter Name="tel" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pagoped" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="pedidodet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="upcel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="nom" Type="varchar" Mode="In" />
+    <Parameter Name="caract" Type="varchar" Mode="In" />
+    <Parameter Name="model" Type="varchar" Mode="In" />
+    <Parameter Name="prec" Type="money" Mode="In" />
+    <Parameter Name="cantidad" Type="int" Mode="In" />
+  </Function>
+  <Function Name="upclie" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="nom" Type="varchar" Mode="In" />
+    <Parameter Name="edad" Type="int" Mode="In" />
+    <Parameter Name="dir" Type="varchar" Mode="In" />
+    <Parameter Name="tel" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="celularesproModelStoreContainer">
+    <EntitySet Name="celular" EntityType="Self.celular" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cliente" EntityType="Self.cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="detallepedido" EntityType="Self.detallepedido" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pago" EntityType="Self.pago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pedido" EntityType="Self.pedido" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" store:Type="Views" store:Schema="sys">
+      <DefiningQuery>SELECT 
+    [database_firewall_rules].[id] AS [id], 
+    [database_firewall_rules].[name] AS [name], 
+    [database_firewall_rules].[start_ip_address] AS [start_ip_address], 
+    [database_firewall_rules].[end_ip_address] AS [end_ip_address], 
+    [database_firewall_rules].[create_date] AS [create_date], 
+    [database_firewall_rules].[modify_date] AS [modify_date]
+    FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ipv6_database_firewall_rules" EntityType="Self.ipv6_database_firewall_rules" store:Type="Views" store:Schema="sys">
+      <DefiningQuery>SELECT 
+    [ipv6_database_firewall_rules].[id] AS [id], 
+    [ipv6_database_firewall_rules].[name] AS [name], 
+    [ipv6_database_firewall_rules].[start_ipv6_address] AS [start_ipv6_address], 
+    [ipv6_database_firewall_rules].[end_ipv6_address] AS [end_ipv6_address], 
+    [ipv6_database_firewall_rules].[create_date] AS [create_date], 
+    [ipv6_database_firewall_rules].[modify_date] AS [modify_date]
+    FROM [sys].[ipv6_database_firewall_rules] AS [ipv6_database_firewall_rules]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__detallepe__id_ce__60A75C0F" Association="Self.FK__detallepe__id_ce__60A75C0F">
+      <End Role="celular" EntitySet="celular" />
+      <End Role="detallepedido" EntitySet="detallepedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detallepe__id_cl__619B8048" Association="Self.FK__detallepe__id_cl__619B8048">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="detallepedido" EntitySet="detallepedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pago__id_cliente__68487DD7" Association="Self.FK__pago__id_cliente__68487DD7">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="pago" EntitySet="pago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pago__id_pedido__693CA210" Association="Self.FK__pago__id_pedido__693CA210">
+      <End Role="pedido" EntitySet="pedido" />
+      <End Role="pago" EntitySet="pago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pedido__id_detal__6477ECF3" Association="Self.FK__pedido__id_detal__6477ECF3">
+      <End Role="detallepedido" EntitySet="detallepedido" />
+      <End Role="pedido" EntitySet="pedido" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

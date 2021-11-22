@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="celularesproModelStoreContainer" CdmEntityContainer="celularesproEntities">
+    <EntitySetMapping Name="celular">
+      <EntityTypeMapping TypeName="celularesproModel.celular">
+        <MappingFragment StoreEntitySet="celular">
+          <ScalarProperty Name="id_celular" ColumnName="id_celular" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="caracteristicas" ColumnName="caracteristicas" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cliente">
+      <EntityTypeMapping TypeName="celularesproModel.cliente">
+        <MappingFragment StoreEntitySet="cliente">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="detallepedido">
+      <EntityTypeMapping TypeName="celularesproModel.detallepedido">
+        <MappingFragment StoreEntitySet="detallepedido">
+          <ScalarProperty Name="id_detallepedido" ColumnName="id_detallepedido" />
+          <ScalarProperty Name="id_celular" ColumnName="id_celular" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pago">
+      <EntityTypeMapping TypeName="celularesproModel.pago">
+        <MappingFragment StoreEntitySet="pago">
+          <ScalarProperty Name="id_pago" ColumnName="id_pago" />
+          <ScalarProperty Name="confirmacionpago" ColumnName="confirmacionpago" />
+          <ScalarProperty Name="fechapago" ColumnName="fechapago" />
+          <ScalarProperty Name="id_pedido" ColumnName="id_pedido" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pedido">
+      <EntityTypeMapping TypeName="celularesproModel.pedido">
+        <MappingFragment StoreEntitySet="pedido">
+          <ScalarProperty Name="id_pedido" ColumnName="id_pedido" />
+          <ScalarProperty Name="fechapedido" ColumnName="fechapedido" />
+          <ScalarProperty Name="id_detallepedido" ColumnName="id_detallepedido" />
+          <ScalarProperty Name="entregapedido" ColumnName="entregapedido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="database_firewall_rules">
+      <EntityTypeMapping TypeName="celularesproModel.database_firewall_rules">
+        <MappingFragment StoreEntitySet="database_firewall_rules">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="start_ip_address" ColumnName="start_ip_address" />
+          <ScalarProperty Name="end_ip_address" ColumnName="end_ip_address" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ipv6_database_firewall_rules">
+      <EntityTypeMapping TypeName="celularesproModel.ipv6_database_firewall_rules">
+        <MappingFragment StoreEntitySet="ipv6_database_firewall_rules">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="start_ipv6_address" ColumnName="start_ipv6_address" />
+          <ScalarProperty Name="end_ipv6_address" ColumnName="end_ipv6_address" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="cliepago" FunctionName="celularesproModel.Store.cliepago">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="celularesproModel.cliepago_Result">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="id_pago" ColumnName="id_pago" />
+          <ScalarProperty Name="confirmacionpago" ColumnName="confirmacionpago" />
+          <ScalarProperty Name="fechapago" ColumnName="fechapago" />
+          <ScalarProperty Name="id_pedido" ColumnName="id_pedido" />
+          <ScalarProperty Name="id_cliente1" ColumnName="id_cliente1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="clieped" FunctionName="celularesproModel.Store.clieped">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="celularesproModel.clieped_Result">
+          <ScalarProperty Name="id_detallepedido" ColumnName="id_detallepedido" />
+          <ScalarProperty Name="id_celular" ColumnName="id_celular" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="id_cliente1" ColumnName="id_cliente1" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="deletecel" FunctionName="celularesproModel.Store.deletecel" />
+    <FunctionImportMapping FunctionImportName="deletecliente" FunctionName="celularesproModel.Store.deletecliente" />
+    <FunctionImportMapping FunctionImportName="insertarcel" FunctionName="celularesproModel.Store.insertarcel" />
+    <FunctionImportMapping FunctionImportName="insertarcliente" FunctionName="celularesproModel.Store.insertarcliente" />
+    <FunctionImportMapping FunctionImportName="pagoped" FunctionName="celularesproModel.Store.pagoped">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="celularesproModel.pagoped_Result">
+          <ScalarProperty Name="id_pedido" ColumnName="id_pedido" />
+          <ScalarProperty Name="fechapedido" ColumnName="fechapedido" />
+          <ScalarProperty Name="id_detallepedido" ColumnName="id_detallepedido" />
+          <ScalarProperty Name="entregapedido" ColumnName="entregapedido" />
+          <ScalarProperty Name="id_pago" ColumnName="id_pago" />
+          <ScalarProperty Name="confirmacionpago" ColumnName="confirmacionpago" />
+          <ScalarProperty Name="fechapago" ColumnName="fechapago" />
+          <ScalarProperty Name="id_pedido1" ColumnName="id_pedido1" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pedidodet" FunctionName="celularesproModel.Store.pedidodet">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="celularesproModel.pedidodet_Result">
+          <ScalarProperty Name="id_pedido" ColumnName="id_pedido" />
+          <ScalarProperty Name="fechapedido" ColumnName="fechapedido" />
+          <ScalarProperty Name="id_detallepedido" ColumnName="id_detallepedido" />
+          <ScalarProperty Name="entregapedido" ColumnName="entregapedido" />
+          <ScalarProperty Name="id_detallepedido1" ColumnName="id_detallepedido1" />
+          <ScalarProperty Name="id_celular" ColumnName="id_celular" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="upcel" FunctionName="celularesproModel.Store.upcel" />
+    <FunctionImportMapping FunctionImportName="upclie" FunctionName="celularesproModel.Store.upclie" />
+  </EntityContainerMapping>
+</Mapping>
