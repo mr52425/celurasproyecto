@@ -13,6 +13,10 @@
 
     Private Sub MisiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MisiónToolStripMenuItem.Click
         Mision.Show()
-        Me.Close()
+        Me.Hide()
+    End Sub
+
+    Private Sub QuienesSomosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuienesSomosToolStripMenuItem.Click
+        Mision.Show()
     End Sub
 End Class

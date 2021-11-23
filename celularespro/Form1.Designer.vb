@@ -24,19 +24,20 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DADSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MisiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VisiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ValoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuienesSomosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContactoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.CatalogoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -66,6 +67,24 @@ Partial Class Form1
         Me.Panel2.Size = New System.Drawing.Size(1144, 97)
         Me.Panel2.TabIndex = 4
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(3, 76)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(316, 20)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "Aviso de COFEPRIS No. 133300202D0145"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(3, 47)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(545, 20)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Queda prohibida su reproducción total o parcial por cualquier forma o medio."
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -81,34 +100,12 @@ Partial Class Form1
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DADSToolStripMenuItem, Me.MisiónToolStripMenuItem, Me.VisiónToolStripMenuItem, Me.ValoresToolStripMenuItem, Me.QuienesSomosToolStripMenuItem, Me.ContactoToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DADSToolStripMenuItem, Me.MisiónToolStripMenuItem, Me.VisiónToolStripMenuItem, Me.ValoresToolStripMenuItem, Me.QuienesSomosToolStripMenuItem, Me.ContactoToolStripMenuItem, Me.CatalogoToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(284, 16)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(767, 33)
+        Me.MenuStrip1.Size = New System.Drawing.Size(867, 33)
         Me.MenuStrip1.TabIndex = 5
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.PapayaWhip
-        Me.Label1.Font = New System.Drawing.Font("Engravers MT", 16.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(374, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(412, 37)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Tecnología MEX"
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.LightCoral
-        Me.Panel1.Controls.Add(Me.MenuStrip1)
-        Me.Panel1.ForeColor = System.Drawing.Color.LightCoral
-        Me.Panel1.Location = New System.Drawing.Point(1, 71)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1144, 72)
-        Me.Panel1.TabIndex = 1
         '
         'DADSToolStripMenuItem
         '
@@ -146,23 +143,27 @@ Partial Class Form1
         Me.ContactoToolStripMenuItem.Size = New System.Drawing.Size(100, 29)
         Me.ContactoToolStripMenuItem.Text = "Contacto"
         '
-        'Label4
+        'Label1
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 47)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(545, 20)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Queda prohibida su reproducción total o parcial por cualquier forma o medio."
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.PapayaWhip
+        Me.Label1.Font = New System.Drawing.Font("Engravers MT", 16.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(374, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(412, 37)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Tecnología MEX"
         '
-        'Label5
+        'Panel1
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(3, 76)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(316, 20)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Aviso de COFEPRIS No. 133300202D0145"
+        Me.Panel1.BackColor = System.Drawing.Color.LightCoral
+        Me.Panel1.Controls.Add(Me.MenuStrip1)
+        Me.Panel1.ForeColor = System.Drawing.Color.LightCoral
+        Me.Panel1.Location = New System.Drawing.Point(1, 71)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1144, 72)
+        Me.Panel1.TabIndex = 1
         '
         'PictureBox1
         '
@@ -172,6 +173,12 @@ Partial Class Form1
         Me.PictureBox1.Size = New System.Drawing.Size(1144, 291)
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
+        '
+        'CatalogoToolStripMenuItem
+        '
+        Me.CatalogoToolStripMenuItem.Name = "CatalogoToolStripMenuItem"
+        Me.CatalogoToolStripMenuItem.Size = New System.Drawing.Size(100, 29)
+        Me.CatalogoToolStripMenuItem.Text = "Catalogo"
         '
         'Form1
         '
@@ -214,4 +221,5 @@ Partial Class Form1
     Friend WithEvents ValoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuienesSomosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ContactoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CatalogoToolStripMenuItem As ToolStripMenuItem
 End Class
