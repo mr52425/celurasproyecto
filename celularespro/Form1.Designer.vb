@@ -30,7 +30,10 @@ Partial Class Form1
         Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel5 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel6 = New System.Windows.Forms.LinkLabel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -79,7 +82,7 @@ Partial Class Form1
         Me.LinkLabel2.AutoSize = True
         Me.LinkLabel2.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel2.LinkColor = System.Drawing.Color.AntiqueWhite
-        Me.LinkLabel2.Location = New System.Drawing.Point(191, 23)
+        Me.LinkLabel2.Location = New System.Drawing.Point(1006, 23)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(107, 29)
         Me.LinkLabel2.TabIndex = 1
@@ -92,7 +95,7 @@ Partial Class Form1
         Me.LinkLabel3.AutoSize = True
         Me.LinkLabel3.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel3.LinkColor = System.Drawing.Color.AntiqueWhite
-        Me.LinkLabel3.Location = New System.Drawing.Point(381, 23)
+        Me.LinkLabel3.Location = New System.Drawing.Point(732, 23)
         Me.LinkLabel3.Name = "LinkLabel3"
         Me.LinkLabel3.Size = New System.Drawing.Size(195, 29)
         Me.LinkLabel3.TabIndex = 2
@@ -105,12 +108,12 @@ Partial Class Form1
         Me.LinkLabel4.AutoSize = True
         Me.LinkLabel4.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel4.LinkColor = System.Drawing.Color.AntiqueWhite
-        Me.LinkLabel4.Location = New System.Drawing.Point(650, 23)
+        Me.LinkLabel4.Location = New System.Drawing.Point(187, 23)
         Me.LinkLabel4.Name = "LinkLabel4"
-        Me.LinkLabel4.Size = New System.Drawing.Size(80, 29)
+        Me.LinkLabel4.Size = New System.Drawing.Size(76, 29)
         Me.LinkLabel4.TabIndex = 3
         Me.LinkLabel4.TabStop = True
-        Me.LinkLabel4.Text = "Visión"
+        Me.LinkLabel4.Text = "Apple"
         '
         'LinkLabel5
         '
@@ -118,12 +121,12 @@ Partial Class Form1
         Me.LinkLabel5.AutoSize = True
         Me.LinkLabel5.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel5.LinkColor = System.Drawing.Color.AntiqueWhite
-        Me.LinkLabel5.Location = New System.Drawing.Point(825, 23)
+        Me.LinkLabel5.Location = New System.Drawing.Point(367, 23)
         Me.LinkLabel5.Name = "LinkLabel5"
-        Me.LinkLabel5.Size = New System.Drawing.Size(86, 29)
+        Me.LinkLabel5.Size = New System.Drawing.Size(109, 29)
         Me.LinkLabel5.TabIndex = 4
         Me.LinkLabel5.TabStop = True
-        Me.LinkLabel5.Text = "Misión"
+        Me.LinkLabel5.Text = "Samsung"
         '
         'LinkLabel6
         '
@@ -131,12 +134,32 @@ Partial Class Form1
         Me.LinkLabel6.AutoSize = True
         Me.LinkLabel6.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel6.LinkColor = System.Drawing.Color.AntiqueWhite
-        Me.LinkLabel6.Location = New System.Drawing.Point(1022, 23)
+        Me.LinkLabel6.Location = New System.Drawing.Point(552, 23)
         Me.LinkLabel6.Name = "LinkLabel6"
-        Me.LinkLabel6.Size = New System.Drawing.Size(93, 29)
+        Me.LinkLabel6.Size = New System.Drawing.Size(96, 29)
         Me.LinkLabel6.TabIndex = 5
         Me.LinkLabel6.TabStop = True
-        Me.LinkLabel6.Text = "Valores"
+        Me.LinkLabel6.Text = "Huawei"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.PapayaWhip
+        Me.Label2.Font = New System.Drawing.Font("Engravers MT", 16.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(12, 173)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(412, 37)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Tecnología MEX"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(254, 238)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(328, 147)
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
         '
         'Form1
         '
@@ -144,12 +167,15 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PapayaWhip
         Me.ClientSize = New System.Drawing.Size(1140, 740)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -163,4 +189,6 @@ Partial Class Form1
     Friend WithEvents LinkLabel4 As LinkLabel
     Friend WithEvents LinkLabel3 As LinkLabel
     Friend WithEvents LinkLabel2 As LinkLabel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
