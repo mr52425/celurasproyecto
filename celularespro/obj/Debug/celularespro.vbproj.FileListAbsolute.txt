@@ -14,4 +14,3 @@ C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\EntityFramewor
 C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\EntityFramework.xml
 C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\obj\Debug\celularespro.vbproj.CopyComplete
