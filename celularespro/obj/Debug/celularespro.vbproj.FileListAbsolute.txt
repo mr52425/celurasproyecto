@@ -15,10 +15,13 @@ C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\EntityFramewor
 C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\EntityFramework.xml
 C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\jorge\Desktop\git\celurasproyecto\celularespro\obj\Debug\celularespro.vbproj.CopyComplete
+<<<<<<< HEAD
 C:\Users\52562\OneDrive\Imágenes\celularesproyecto\celularespro\obj\Debug\celularespro.vbproj.AssemblyReference.cache
 C:\Users\52562\OneDrive\Imágenes\celularesproyecto\celularespro\obj\Debug\celularespro.exe
 C:\Users\52562\OneDrive\Imágenes\celularesproyecto\celularespro\obj\Debug\celularespro.xml
 C:\Users\52562\OneDrive\Imágenes\celularesproyecto\celularespro\obj\Debug\celularespro.pdb
+=======
+>>>>>>> loginysplah
 C:\Users\52562\OneDrive\Imágenes\celularesproyecto\celularespro\bin\Debug\celularespro.exe.config
 C:\Users\52562\OneDrive\Imágenes\celularesproyecto\celularespro\bin\Debug\celularespro.exe
 C:\Users\52562\OneDrive\Imágenes\celularesproyecto\celularespro\bin\Debug\celularespro.pdb
@@ -32,3 +35,5 @@ C:\Users\52562\OneDrive\Imágenes\celularesproyecto\celularespro\obj\Debug\celul
 C:\Users\52562\OneDrive\Imágenes\celularesproyecto\celularespro\obj\Debug\celularespro.vbproj.GenerateResource.cache
 C:\Users\52562\OneDrive\Imágenes\celularesproyecto\celularespro\obj\Debug\celularespro.vbproj.CoreCompileInputs.cache
 C:\Users\52562\OneDrive\Imágenes\celularesproyecto\celularespro\obj\Debug\celularespro.vbproj.CopyComplete
+C:\Users\52562\OneDrive\Imágenes\celularesproyecto\celularespro\obj\Debug\celularespro.LoginForm1.resources
+C:\Users\52562\OneDrive\Imágenes\celularesproyecto\celularespro\obj\Debug\celularespro.SplashScreen4.resources
